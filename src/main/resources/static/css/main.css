@@ -75,7 +75,7 @@ footer a {
 .vk, .school {
     text-align: center;
     margin: 0 20px;
-    width: calc(100% / 3);
+    width: min(calc(100% / 3), 300px);
 }
 
 .vkLogo {
