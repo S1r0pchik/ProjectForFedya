@@ -49,6 +49,7 @@ main {
     display: grid;
     grid-column-gap: 60px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: 40px;
 }
 
 footer {
@@ -61,7 +62,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 footer.fixed-bottom {
@@ -78,7 +79,7 @@ footer a, footer p {
 
 .vk, .school {
     text-align: center;
-    margin: 0 20px;
+    margin: 0 0 px;
     width: min(calc(100% / 3), 300px);
 }
 

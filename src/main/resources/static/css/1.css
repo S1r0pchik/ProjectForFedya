@@ -26,3 +26,35 @@ h2 {
     margin-bottom: 30px;
     font-weight: 900;
 }
+
+#toTop {
+    width: 5vw;
+    height: 5vw;
+    background-color: #FFE6A8;
+    bottom: 20px;
+    left: 15px;
+    cursor: pointer;
+    display: none;
+    border-radius: 50%;
+    position: sticky;
+}
+
+#toTop svg {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+}
+
+#toTop.active {
+    visibility: hidden;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+main {
+    margin-bottom: 0px;
+}
