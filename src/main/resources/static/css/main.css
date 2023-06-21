@@ -71,9 +71,9 @@ footer.fixed-bottom {
   bottom: 0;
 }
 
-footer a {
+footer a, footer p {
     color: white;
-    font-size: max(min(1.25rem, 1.25vw), 10px);
+    font-size: max(min(1.25rem, 1.25vw), 15px);
 }
 
 .vk, .school {

@@ -1,4 +1,4 @@
-
+console.log("haha");
 function fun() {
     var footer = document.getElementById('footer').getBoundingClientRect();
     var main = document.getElementById('main').getBoundingClientRect();

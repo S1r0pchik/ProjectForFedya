@@ -1,0 +1,28 @@
+p {
+    color: white;
+}
+
+main {
+    margin-top: 40px;
+    display: table;
+}
+
+p {
+    position: relative;
+    width: 90%;
+    left: 5%;
+    font-size: max(1.1vw, 15px);
+}
+
+
+h2 {
+    color: white;
+    display: block;
+}
+
+.name {
+    text-align: center;
+    font-size: max(1.6vw, 22px);
+    margin-bottom: 30px;
+    font-weight: 900;
+}
