@@ -25,6 +25,9 @@ header {
     margin-left: 60px;
     height: 100px;
     line-height: 100px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #FFE6A8;
 }
 
 .logo {
@@ -161,19 +164,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .head {
-    z-index: 3;
     position: absolute;
-    width: max(calc(100% - 120px), 300px);
+    width: auto;
     height: 100px;
-    border-bottom: solid;
-    border-width: 1px;
-    border-color: #FFE6A8;
 }
 
 .headerMenu {
     width: max(300px, 100%);
     height: calc(100% - 100px);
-    padding-top: 5px;
 }
 
 .headerList.active {
@@ -191,9 +189,13 @@ footer.active {
 .headerList {
     display: flex;
     float: right;
+    margin-top: 5px;
 }
 
 @media (max-width: 700px) {
+.head {
+    width: max(calc(100% - 120px), 300px);
+}
     .burger {
         display: block;
         position: relative;
