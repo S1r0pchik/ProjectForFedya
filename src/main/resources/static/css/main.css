@@ -77,12 +77,12 @@ footer.fixed-bottom {
 
 footer a, footer p {
     color: white;
-    font-size: max(min(1.25rem, 1.25vw), 15px);
+    font-size: max(min(1.25rem, 1.25vw), 10px);
 }
 
 .vk, .school {
     text-align: center;
-    margin: 0 0 px;
+    margin: 0 2px;
     width: min(calc(100% / 3), 300px);
 }
 
@@ -193,9 +193,9 @@ footer.active {
 }
 
 @media (max-width: 700px) {
-.head {
-    width: max(calc(100% - 120px), 300px);
-}
+    .head {
+        width: max(calc(100% - 120px), 300px);
+    }
     .burger {
         display: block;
         position: relative;

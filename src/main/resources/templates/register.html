@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" th:href="@{/css/register.css}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script th:src="@{/js/register.js}"></script>
+
+    <img class="back" th:src="@{/image/background.jpg}">
+    <div th:insert="blocks/header :: header"></div>
+
+    <main id="main">
+        <div class="formDiv">
+            <h2>Регистрация</h2>
+            <input placeholder="Имя">
+            <input placeholder="Фамилия">
+            <input placeholder="Логин">
+            <input placeholder="Пароль">
+            <button class="create" type="submit">Создать<br>аккаунт</button>
+        </div>
+    </main>
+
+    <div th:insert="blocks/footer :: footer"></div>
+
+</body>
+</html>

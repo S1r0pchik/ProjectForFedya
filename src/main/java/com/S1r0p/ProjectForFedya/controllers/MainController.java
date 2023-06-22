@@ -40,4 +40,9 @@ public class MainController {
     public String sixth(Model model) {
         return "6";
     }
+
+    @GetMapping("/register")
+    public String register(Model model) {
+        return "register";
+    }
 }
