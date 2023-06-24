@@ -17,14 +17,14 @@
     <div th:insert="blocks/header :: header"></div>
 
     <main id="main">
-        <div class="formDiv">
+        <form class="formDiv" method="post" action="createUser">
             <h2>Регистрация</h2>
-            <input placeholder="Имя">
-            <input placeholder="Фамилия">
-            <input placeholder="Логин">
-            <input placeholder="Пароль">
+            <input name="name" placeholder="Имя">
+            <input name="surname" placeholder="Фамилия">
+            <input name="login" placeholder="Логин">
+            <input name="password" placeholder="Пароль">
             <button class="create" type="submit">Создать<br>аккаунт</button>
-        </div>
+        </form>
     </main>
 
     <div th:insert="blocks/footer :: footer"></div>

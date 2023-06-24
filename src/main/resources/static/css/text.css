@@ -14,7 +14,6 @@ p {
     font-size: max(1.1vw, 15px);
 }
 
-
 h2 {
     color: white;
     display: block;
@@ -28,15 +27,15 @@ h2 {
 }
 
 #toTop {
+    z-index: 3;
     width: 5vw;
     height: 5vw;
     background-color: #FFE6A8;
-    bottom: 20px;
-    left: 15px;
+    bottom: 30px;
     cursor: pointer;
     display: none;
     border-radius: 50%;
-    position: sticky;
+    position: fixed;
 }
 
 #toTop svg {
@@ -52,9 +51,5 @@ h2 {
 }
 
 footer {
-    margin-top: 40px;
-}
-
-main {
-    margin-bottom: 0px;
+    margin-top: 60px;
 }
