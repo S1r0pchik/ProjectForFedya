@@ -15,7 +15,9 @@ public class MainController {
     private UserService userService;
 
     @GetMapping("/")
-    public String main(Model model) { return "main"; }
+    public String main(Model model) {
+        return "main";
+    }
 
     @GetMapping("/1")
     public String first(Model model) {
@@ -47,16 +49,13 @@ public class MainController {
         return "6";
     }
 
-    @GetMapping("/register")
-    public String register(Model model) { return "register"; }
+    @GetMapping("/tests")
+    public String tests(Model model) {
+        return "tests";
+    }
 
-    @PostMapping("/createUser")
-    public String createUSer(@ModelAttribute UserDtls user) {
-
-        System.out.println(user);
-
-//        userService.createUser(user);
-
-        return "redirect:/";
+    @GetMapping("/test")
+    public String test(Model model) {
+        return "test";
     }
 }

@@ -26,11 +26,15 @@ function fun() {
         $('.line').removeClass('active');
     }
 
-    var p = document.getElementById('text').getBoundingClientRect();
-    var len = p.left / 4.0;
-    $('#toTop').css('width', 2 * len + 'px');
-    $('#toTop').css('height', 2 * len + 'px');
-    $('#toTop').css('left', len + 'px');
+    try {
+        var p = document.getElementById('text').getBoundingClientRect();
+        var len = p.left / 4.0;
+        $('#toTop').css('width', 2 * len + 'px');
+        $('#toTop').css('height', 2 * len + 'px');
+        $('#toTop').css('left', len + 'px');
+    } catch {
+
+    }
 }
 
 px_ratio = window.devicePixelRatio || window.screen.availWidth / document.documentElement.clientWidth;

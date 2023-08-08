@@ -1,0 +1,13 @@
+.card {
+    height: 250px;
+}
+
+.desc {
+    height: 100%;
+    border-radius: 40px;
+}
+
+.desc > p {
+    top: 50%;
+    transform: translateY(-50%);
+}
