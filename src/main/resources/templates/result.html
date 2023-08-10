@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tests</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link rel="stylesheet" th:href="@{/css/result.css}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script th:src="@{/js/text.js}"></script>
+
+    <img class="back" th:src="@{/image/background.jpg}">
+
+    <div class="wrapper">
+        <div th:insert="blocks/header :: header"></div>
+        <div class="content">
+            <p class="name" th:text="'Результаты теста по теме: ' + ${mes}"></p>
+            <div id="main">
+                <table>
+                    <colgroup>
+                        <col span="1" style="width: 70%;">
+                        <col span="1" style="width: 30%;">
+                    </colgroup>
+                    <tr>
+                        <th>Имя и Фамилия</th>
+                        <th>Результат</th>
+                    </tr>
+                    <tr th:each="el : ${res}">
+                        <td th:text="${el.surname} + ' '  + ${el.name}"></td>
+                        <td th:text="${el.result}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div th:insert="blocks/footer :: footer"></div>
+    </div>
+
+</body>
+</html>

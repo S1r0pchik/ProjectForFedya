@@ -1,0 +1,23 @@
+table, th, td {
+    background-color: #FFE6A8;
+    border: 1px solid #3F2319;
+    border-collapse: collapse;
+    border-radius: 30px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+    color: #3F2319;
+}
+
+.name {
+    margin-top: 25px;
+    margin-left: 60px;
+    width: calc(100% - 120px);
+    font-size: max(1.5vw, 20px);
+    font-weight: bold;
+    color: white;
+}
+
+.content {
+    text-align: center;
+}

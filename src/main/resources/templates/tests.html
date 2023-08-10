@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Register</title>
+    <title>Tests</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" th:href="@{/css/main.css}" />
     <link rel="stylesheet" th:href="@{/css/tests.css}" />
@@ -10,47 +10,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-<script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
-<script th:src="@{/js/text.js}"></script>
-<!--<script th:src="@{/js/register.js}"></script>-->
+    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script th:src="@{/js/text.js}"></script>
 
-<img class="back" th:src="@{/image/background.jpg}">
-<div th:insert="blocks/header :: header"></div>
+    <img class="back" th:src="@{/image/background.jpg}">
 
-<main id="main">
-    <a href="/test" class="card">
-        <div class="desc">
-            <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО ДРЕВНЕЙ РУСИ"</p>
+    <div class="wrapper">
+        <div th:insert="blocks/header :: header"></div>
+        <div class="content">
+            <div id="main">
+                <a href="/test/1" class="card">
+                    <div class="desc">
+                        <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО ДРЕВНЕЙ РУСИ"</p>
+                    </div>
+                </a>
+                <a href="/test/2" class="card">
+                    <div class="desc">
+                        <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО ВО ВРЕМЕНА ТАТАРО-МОНГОЛЬСКОГО ИГА"</p>
+                    </div>
+                </a>
+                <a href="/test/3" class="card">
+                    <div class="desc">
+                        <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО В РУССКОМ ЦАРСТВЕ"</p>
+                    </div>
+                </a>
+                <a href="/test/4" class="card">
+                    <div class="desc">
+                        <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО РОССИЙСКОЙ ИМПЕРИИ И ВРЕМЕННОГО ПРАВИТЕЛЬСТВА"</p>
+                    </div>
+                </a>
+                <a href="/test/5" class="card">
+                    <div class="desc">
+                        <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО СССР"</p>
+                    </div>
+                </a>
+                <a href="/test/6" class="card">
+                    <div class="desc">
+                        <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО РОССИЙСКОЙ ФЕДЕРАЦИИ"</p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </a>
-    <a href="/2" class="card">
-        <div class="desc">
-            <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО ВО ВРЕМЕНА ТАТАРО-МОНГОЛЬСКОГО ИГА"</p>
-        </div>
-    </a>
-    <a href="/3" class="card">
-        <div class="desc">
-            <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО В РУССКОМ ЦАРСТВЕ"</p>
-        </div>
-    </a>
-    <a href="/4" class="card">
-        <div class="desc">
-            <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО РОССИЙСКОЙ ИМПЕРИИ И ВРЕМЕННОГО ПРАВИТЕЛЬСТВА"</p>
-        </div>
-    </a>
-    <a href="/5" class="card">
-        <div class="desc">
-            <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО СССР"</p>
-        </div>
-    </a>
-    <a href="/6" class="card">
-        <div class="desc">
-            <p>ТЕСТ ПО ТЕМЕ:<br>"ПРАВО РОССИЙСКОЙ ФЕДЕРАЦИИ"</p>
-        </div>
-    </a>
-</main>
-
-<div th:insert="blocks/footer :: footer"></div>
+        <div th:insert="blocks/footer :: footer"></div>
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,25 @@
+.role {
+    color: white;
+    text-align: center;
+    font-size: max(1.5vw, 30px);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.exp {
+    color: white;
+    text-align: end;
+    font-size: max(1vw, 20px);
+    margin-top: 20px;
+}
+
+#main {
+    grid-column-gap: 100%;
+}
+
+.img {
+    width: min(100%, 2000px);
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}

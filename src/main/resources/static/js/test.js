@@ -42,37 +42,63 @@ const results =
 
 const questions =
 [
-   new Question("2 + 2 = ",
-   [
-       new Answer("2", 0),
-       new Answer("3", 0),
-       new Answer("4", 1),
-       new Answer("0", 0)
-   ]),
-   new Question("2 + 1 = ",
+    // 1
     [
-        new Answer("2", 0),
-        new Answer("3", 1),
-        new Answer("4", 0),
-        new Answer("0", 0)
-   ])
+        new Question("2 + 2 = ",
+        [
+            new Answer("2", 0),
+            new Answer("3", 0),
+            new Answer("4", 1),
+            new Answer("0", 0)
+        ]),
+        new Question("4 - 4 = ",
+        [
+          new Answer("2", 0),
+          new Answer("3", 0),
+          new Answer("4", 0),
+          new Answer("0", 1)
+      ]),
+    ],
+    // 2
+    [
+        new Question("2 + 1 = ",
+        [
+            new Answer("2", 0),
+            new Answer("3", 1),
+            new Answer("4", 0),
+            new Answer("0", 0)
+        ])
+    ],
+    // 3
+    [
+      new Question("2 + 0 = ",
+       [
+           new Answer("2", 1),
+           new Answer("3", 0),
+           new Answer("4", 0),
+           new Answer("0", 0)
+      ])
+  ],
 ];
 
-const quiz = new Quiz(questions, results);
+const quiz = new Quiz(questions[Number(document.getElementById("test").value) - 1], results);
 
 console.log(quiz);
 
 Update();
+
+function Post() {
+    document.getElementById("result").value = "" + quiz.score;
+}
 
 function Update() {
     if (quiz.current < quiz.questions.length) {
         console.log(quiz.questions[quiz.current].text);
         document.getElementById("quest").innerHTML = quiz.questions[quiz.current].text;
 
-        const main = document.getElementById("main");
-        main.innerHTML = "";
         for (let i = 0; i < quiz.questions[quiz.current].answers.length; ++i) {
-            main.innerHTML += '<button onclick="Check(' + i + ')">' + quiz.questions[quiz.current].answers[i].text + '</button>';
+            const btn = document.getElementById("btn" + (i + 1));
+            btn.innerHTML = quiz.questions[quiz.current].answers[i].text;
         }
         document.getElementById("score").innerHTML = quiz.current + 1 + '/' + quiz.questions.length;
     } else {
@@ -84,8 +110,12 @@ function Update() {
                 break;
             }
         }
-        document.getElementById("quest").innerHTML = quiz.results[res].text;
-        document.getElementById("main").innerHTML = "";
+        document.getElementById("quest").innerHTML = "Ваш результат: " + quiz.score + " из " + quiz.questions.length;
+        for (let i = 0; i < quiz.questions[quiz.current - 1].answers.length; ++i) {
+            const btn = document.getElementById("btn" + (i + 1));
+            btn.style = "display: none";
+        }
+        document.getElementById("form").classList.remove("hide");
         document.getElementById("score").innerHTML = "";
     }
 }
@@ -99,4 +129,27 @@ function Check(index) {
     }
     console.log(quiz);
     Update();
+}
+
+function CheckValid(value) {
+    var name = document.getElementById('name').value;
+    var surname = document.getElementById('surname').value;
+//    console.log(name, surname);
+    var ok = (name != "" && surname != "");
+    for (var i = 0; i < name.length; ++i) {
+        ok &= (name[i].toLowerCase() >= 'а' && name[i].toLowerCase() <= 'я');
+    }
+    for (var i = 0; i < surname.length; ++i) {
+        ok &= (surname[i].toLowerCase() >= 'а' && surname[i].toLowerCase() <= 'я');
+    }
+//    console.log(ok);
+    if (ok) {
+        document.getElementById("post").disabled = false;
+        document.getElementById("post").classList.remove("disabled");
+        document.getElementById("post").classList.add("enable");
+    } else {
+        document.getElementById("post").disabled = true;
+        document.getElementById("post").classList.remove("enable");
+        document.getElementById("post").classList.add("disabled");
+    }
 }

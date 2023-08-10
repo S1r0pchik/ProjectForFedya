@@ -2,7 +2,7 @@ p {
     color: white;
 }
 
-main {
+#main {
     margin-top: 40px;
     display: table;
 }
@@ -48,8 +48,4 @@ h2 {
 
 #toTop.active {
     visibility: hidden;
-}
-
-footer {
-    margin-top: 60px;
 }

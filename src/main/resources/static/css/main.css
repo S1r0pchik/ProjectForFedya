@@ -4,13 +4,23 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
 a {
     text-decoration: none;
 }
 
 html, body {
     width: max(100%, 420px);
-    height: auto;
+    height: 100%;
 }
 
 .back {
@@ -37,7 +47,7 @@ header {
     font-family: 'Lobster', cursive;
 }
 
-.tests, .about, .login {
+.tests, .about, .login, .results {
     float: right;
     color: white;
     font-size: 20px;
@@ -45,14 +55,14 @@ header {
     margin-left: 40px;
 }
 
-main {
+#main {
     grid-auto-flow: dense;
     margin-left: 60px;
     width: calc(100% - 120px);
     display: grid;
     grid-column-gap: 60px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 footer {
@@ -65,7 +75,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
 }
 
 footer.fixed-bottom {
@@ -179,20 +188,22 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 20px;
 }
 
-main.active {
-    visibility: hidden;
-}
+
 footer.active {
-    visibility: hidden;
+    display: none;
+}
+
+.content.active {
+    display: none;
 }
 
 .headerList {
     display: flex;
     float: right;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 720px) {
     .head {
         width: max(calc(100% - 120px), 300px);
     }
@@ -227,7 +238,7 @@ footer.active {
         height: 2px;
         top: 8px;
     }
-    main {
+    #main {
         margin-top: 5px;
     }
     .headerList {
